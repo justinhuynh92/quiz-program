@@ -44,3 +44,10 @@ for key, value in quiz.items():
 
     if answer.lower() == value['answer'].lower():
         print('Correct')
+        #increase score for each win
+        score = score + 1
+        print("Your score is: " + str(score))
+    else:
+        print('Wrong')
+        print('The answer is : ' + value['answer'])
+        print("Your score is: " + str(score))
