@@ -47,7 +47,15 @@ for key, value in quiz.items():
         #increase score for each win
         score = score + 1
         print("Your score is: " + str(score))
+        print("")
+        print("")
     else:
         print('Wrong')
         print('The answer is : ' + value['answer'])
         print("Your score is: " + str(score))
+        print("")
+        print("")
+
+print("You got " + str(score) + " out of 7 questions correctly.")
+#convert to a percentage
+print("Your percentage is " + str(int(score/7 * 100)) + "%")
