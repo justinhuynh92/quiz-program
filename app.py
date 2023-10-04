@@ -1,7 +1,3 @@
-# display each question to the user and allow them to answer
-# tell them if they are right or wrong
-# show the final result when quiz is completed
-
 # add a dictionary that stores questions and answers
 quiz = {
     "question1": {
@@ -42,20 +38,18 @@ for key, value in quiz.items():
     print(value['question'])
     answer = input("Answer? ")
 
+    # tell them if they are right or wrong
     if answer.lower() == value['answer'].lower():
         print('Correct')
         #increase score for each win
         score = score + 1
         print("Your score is: " + str(score))
-        print("")
-        print("")
     else:
         print('Wrong')
         print('The answer is : ' + value['answer'])
         print("Your score is: " + str(score))
-        print("")
-        print("")
 
+# show the final result when quiz is completed
 print("You got " + str(score) + " out of 7 questions correctly.")
 #convert to a percentage
 print("Your percentage is " + str(int(score/7 * 100)) + "%")
