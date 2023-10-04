@@ -1,5 +1,3 @@
-# have a variable that tracks the score of the player
-# loop through the dictionary using the key, values pair
 # display each question to the user and allow them to answer
 # tell them if they are right or wrong
 # show the final result when quiz is completed
@@ -35,3 +33,14 @@ quiz = {
         "answer": "Vienna"
     },
 }
+
+# have a variable that tracks the score of the player
+score = 0
+
+# loop through the dictionary using the key, values pair
+for key, value in quiz.items():
+    print(value['question'])
+    answer = input("Answer? ")
+
+    if answer.lower() == value['answer'].lower():
+        print('Correct')
